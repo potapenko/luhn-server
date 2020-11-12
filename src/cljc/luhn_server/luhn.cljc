@@ -29,7 +29,7 @@
   (->> digits (reduce +)))
 
 (defn valid-string? [s]
-  (-> s str count (> 1)))
+  (-> s str count (>= 1)))
 
 (defn digits? [s]
   (->> s str (re-find #"^\d+$") nil? not))
@@ -49,5 +49,6 @@
 (comment
 
   (valid? "7253 2262 5312 0539")
+  (valid? "1")
 
   )
