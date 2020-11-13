@@ -2,7 +2,7 @@
   (:require [clojure.test :refer :all]
             [luhn-server.luhn :as l]))
 
-(deftest valid?-test
+(deftest valid-test
   (is (= true (l/valid-string? "1111")))
   (is (= true (l/valid-string? "1111 222 333")))
   (is (= true (l/valid-string? "111k22")))
